@@ -33,8 +33,19 @@ setup_mariadb() {
 }
 
 setup_postgres() {
+  local data_dir="/var/lib/postgres/data"
+
   install postgresql
-  "$sudo_cmd" -u postgres initdb --auth-local=peer --auth-host=scram-sha-256 -D /var/lib/postgres/data
+
+  if "$sudo_cmd" test -f "$data_dir/PG_VERSION"; then
+    echo "PostgreSQL is already initialized at $data_dir, skipping initdb"
+  elif "$sudo_cmd" test -d "$data_dir" && "$sudo_cmd" sh -c "[ -n \"\$(ls -A '$data_dir' 2>/dev/null)\" ]"; then
+    echo "Skipping PostgreSQL initdb: $data_dir exists and is not empty"
+    echo "Clean $data_dir if you want to reinitialize PostgreSQL"
+  else
+    "$sudo_cmd" -u postgres initdb --auth-local=peer --auth-host=scram-sha-256 -D "$data_dir"
+  fi
+
   enable_service postgresql
 }
 
