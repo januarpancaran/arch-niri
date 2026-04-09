@@ -59,6 +59,20 @@ EOF
   echo "Saved vscode launch args to $launch_args_file"
 }
 
+setup_npm() {
+  local npm_prefix="$HOME/.local/npm-global"
+
+  if ! cmd_exists npm; then
+    echo "npm not found, skipping npm setup"
+    return 0
+  fi
+
+  mkdir -p "$npm_prefix"
+  npm config set prefix "$npm_prefix"
+
+  echo "Configured npm global prefix at $npm_prefix"
+}
+
 install_dev_pkgs() {
   install "${DEV_PKGS[@]}"
 
@@ -66,4 +80,5 @@ install_dev_pkgs() {
   setup_postgres
   setup_docker
   setup_vscode
+  setup_npm
 }
