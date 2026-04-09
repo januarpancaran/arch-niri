@@ -66,12 +66,18 @@ set_config_dir() {
 
 backup_dir() {
   local dir="$1"
-  [ -d "$dir" ] && mv -v "$dir" "${dir}.bak"
+  if [ -d "$dir" ]; then
+    mv -v "$dir" "${dir}.bak"
+  fi
+  return 0
 }
 
 backup_file() {
   local file="$1"
-  [ -f "$file" ] && mv -v "$file" "${file}.bak"
+  if [ -f "$file" ]; then
+    mv -v "$file" "${file}.bak"
+  fi
+  return 0
 }
 
 link_file() {
