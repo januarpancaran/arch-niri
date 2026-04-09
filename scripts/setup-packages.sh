@@ -14,6 +14,7 @@ PKGS=(
   fastfetch
   fzf
   gdm
+  ghostty
   git
   gnome-keyring
   gvfs
