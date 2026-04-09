@@ -72,7 +72,7 @@ alias ....='cd ../../..'
 
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.dotnet/tools:$PATH"
-export GEM_HOME="$HOME/.gem"
+export GEM_HOME="$(gem env user_gemhome)"
 export PATH="$GEM_HOME/bin:$PATH"
 export SSL_CERT_DIR="$HOME/.aspnet/dev-certs/trust:/usr/lib/ssl/certs"
 
