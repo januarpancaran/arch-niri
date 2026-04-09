@@ -90,7 +90,14 @@ link_file() {
 }
 
 add_group() {
-  "$sudo_cmd" usermod -aG "$1" $USER
+  local group_name="$1"
+  local target_user="${SUDO_USER:-${USER:-}}"
+
+  if [ -z "$target_user" ]; then
+    target_user="$(id -un)"
+  fi
+
+  "$sudo_cmd" usermod -aG "$group_name" "$target_user"
 }
 
 enable_service() {
