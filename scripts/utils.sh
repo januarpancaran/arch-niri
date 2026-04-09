@@ -84,7 +84,19 @@ link_file() {
   local src="$1"
   local target="$2"
 
-  mkdir -p "$(dirname $target)"
+  mkdir -p "$(dirname "$target")"
+
+  if [ -L "$target" ] && [ "$target" -ef "$src" ]; then
+    return 0
+  fi
+
+  if [ -L "$target" ]; then
+    rm -f "$target"
+  elif [ -d "$target" ]; then
+    backup_dir "$target"
+  elif [ -e "$target" ]; then
+    backup_file "$target"
+  fi
 
   ln -s "$src" "$target"
 }
