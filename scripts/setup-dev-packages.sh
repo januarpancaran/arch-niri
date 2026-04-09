@@ -9,6 +9,7 @@ DEV_PKGS=(
     bun
     composer
     dotnet-sdk
+    dotnet-runtime
     gcc
     github-cli
     github-copilot-cli
