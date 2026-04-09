@@ -40,7 +40,7 @@ chromium_launch_args() {
 
     cat > "$launch_args_file" << EOF
 --enable-features=UseOzonePlatform,TouchpadOverscrollHistoryNavigation 
---ozone-platform=wayland"
+--ozone-platform=wayland
 EOF
 
     echo "Saved launch args to $launch_args_file"
