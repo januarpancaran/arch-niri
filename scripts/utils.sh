@@ -94,3 +94,20 @@ enable_service() {
 enable_user_service() {
     systemctl enable --user "$@"
 }
+
+user_choice() {
+  local label="$1"
+  shift
+
+  read -rp "Install optional ${label}? [y/N] " choice
+
+  case "$choice" in
+  [Yy])
+    echo "Installing ${label}..."
+    "$@"
+    ;;
+  *)
+    echo "Skipping ${label}"
+    ;;
+  esac
+}

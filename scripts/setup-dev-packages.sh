@@ -14,6 +14,7 @@ DEV_PKGS=(
     github-copilot-cli
     go
     jdk-openjdk
+    neovim
     nodejs
     opencode
     php
