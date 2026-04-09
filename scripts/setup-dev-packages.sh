@@ -4,6 +4,8 @@ script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source "$script_dir/utils.sh"
 
 DEV_PKGS=(
+    aspnet-runtime
+    aspnet-targeting-pack
     bun
     composer
     dotnet-sdk
