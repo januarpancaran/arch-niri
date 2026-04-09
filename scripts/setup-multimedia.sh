@@ -14,5 +14,3 @@ MULTIMEDIA_PKGS=(
 install_multimedia() {
     install "${MULTIMEDIA_PKGS[@]}"
 }
-
-install_multimedia

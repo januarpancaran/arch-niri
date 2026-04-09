@@ -52,5 +52,3 @@ PKGS=(
 install_pkgs() {
     install "${PKGS[@]}"
 }
-
-install_pkgs

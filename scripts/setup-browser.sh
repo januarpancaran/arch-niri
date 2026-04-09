@@ -84,5 +84,3 @@ choose_browser() {
             ;;
     esac
 }
-
-choose_browser

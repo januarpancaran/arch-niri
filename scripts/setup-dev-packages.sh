@@ -66,5 +66,3 @@ install_dev_pkgs() {
     setup_docker
     setup_vscode
 }
-
-install_dev_pkgs

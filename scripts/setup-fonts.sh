@@ -12,5 +12,3 @@ FONTS=(
 install_fonts() {
     install "${FONTS[@]}"
 }
-
-install_fonts

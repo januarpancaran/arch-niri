@@ -17,5 +17,3 @@ setup_sound() {
 
     enable_user_service pipewire
 }
-
-setup_sound

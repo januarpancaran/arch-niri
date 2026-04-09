@@ -13,5 +13,3 @@ SERVICES=(
 enable_services() {
     enable_service "${SERVICES[@]}"
 }
-
-enable_services

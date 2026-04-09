@@ -41,5 +41,3 @@ install_themes() {
     link_file "/usr/share/themes/Dracula/gtk-4.0/gtk-dark.css" "$gtk4_dir/gtk-dark.css"
     link_file "/usr/share/themes/Dracula/gtk-4.0/assets" "$gtk4_dir/assets"
 }
-
-install_themes
