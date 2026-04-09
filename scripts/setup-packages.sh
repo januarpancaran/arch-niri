@@ -27,6 +27,7 @@ PKGS=(
   openssh
   os-prober
   polkit-gnome
+  power-profiles-daemon
   ripgrep
   starship
   tar

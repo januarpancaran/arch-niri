@@ -7,6 +7,7 @@ SERVICES=(
   NetworkManager
   bluetooth
   gdm
+  power-profiles-daemon
   warp-svc
 )
 
