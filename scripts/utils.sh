@@ -67,7 +67,9 @@ set_config_dir() {
 backup_dir() {
   local dir="$1"
   if [ -d "$dir" ]; then
-    mv -v "$dir" "${dir}.bak"
+    local backup_path
+    backup_path="$(next_backup_path "$dir")"
+    mv -v "$dir" "$backup_path"
   fi
   return 0
 }
@@ -75,9 +77,28 @@ backup_dir() {
 backup_file() {
   local file="$1"
   if [ -f "$file" ]; then
-    mv -v "$file" "${file}.bak"
+    local backup_path
+    backup_path="$(next_backup_path "$file")"
+    mv -v "$file" "$backup_path"
   fi
   return 0
+}
+
+next_backup_path() {
+  local target="$1"
+  local timestamp
+  local candidate
+  local counter=0
+
+  timestamp="$(date +%Y%m%d-%H%M%S)"
+  candidate="${target}.bak.${timestamp}"
+
+  while [ -e "$candidate" ] || [ -L "$candidate" ]; do
+    counter=$((counter + 1))
+    candidate="${target}.bak.${timestamp}.${counter}"
+  done
+
+  printf '%s\n' "$candidate"
 }
 
 link_file() {
