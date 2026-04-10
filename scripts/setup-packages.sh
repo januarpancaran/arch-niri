@@ -9,8 +9,8 @@ PKGS=(
   bluez
   bluez-utils
   brightnessctl
-  curl
   cloudflare-warp-bin
+  curl
   fastfetch
   fzf
   gdm
@@ -21,11 +21,15 @@ PKGS=(
   htop
   jq
   less
+  loupe
   man-db
   nautilus
+  niri
+  noctalia-shell
   ntfs-3g
   openssh
   os-prober
+  papers
   polkit-gnome
   power-profiles-daemon
   ripgrep
@@ -41,10 +45,8 @@ PKGS=(
   wl-mirror
   xdg-desktop-portal-gnome
   xdg-desktop-portal-gtk
-  xwayland-satellite
-  niri
-  noctalia-shell
   xorg-xhost
+  xwayland-satellite
   yazi
   zip
   zoxide
