@@ -7,7 +7,7 @@ MULTIMEDIA_PKGS=(
   discord
   mpv
   obs-studio
-  spotify
+  spotify-launcher
   telegram-desktop
 )
 

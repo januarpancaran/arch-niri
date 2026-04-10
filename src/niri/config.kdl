@@ -98,7 +98,7 @@ binds {
     Mod+I { spawn "~/.config/niri/scripts/launch-browser.sh" "incognito"; }
     Mod+E { spawn "nautilus"; }
     Mod+C { spawn "code"; }
-    Mod+SemiColon { spawn "spotify"; }
+    Mod+SemiColon { spawn "spotify-launcher"; }
     Mod+D { spawn "discord"; }
     Mod+Shift+SemiColon repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 
