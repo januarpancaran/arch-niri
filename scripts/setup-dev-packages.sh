@@ -20,6 +20,7 @@ DEV_PKGS=(
   opencode
   php
   python
+  python-pip
   ruby
   rust
   sqlite
