@@ -86,13 +86,14 @@
       ],
       "left": [
         {
-          "colorizeSystemIcon": "none",
+          "colorizeSystemIcon": "primary",
+          "colorizeSystemText": "none",
           "customIconPath": "",
-          "enableColorization": false,
+          "enableColorization": true,
           "icon": "rocket",
           "iconColor": "none",
           "id": "Launcher",
-          "useDistroLogo": false
+          "useDistroLogo": true
         },
         {
           "characterCount": 2,
@@ -187,6 +188,7 @@
         {
           "colorizeDistroLogo": false,
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": false,
           "icon": "noctalia",
@@ -338,7 +340,6 @@
     "animationDisabled": false,
     "animationSpeed": 1,
     "autoStartAuth": false,
-    "avatarImage": "/home/daangsangu/.face",
     "boxRadiusRatio": 1,
     "clockFormat": "hh\\nmm",
     "clockStyle": "custom",
