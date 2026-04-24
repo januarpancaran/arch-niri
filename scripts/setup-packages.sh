@@ -43,6 +43,7 @@ PKGS=(
   wget
   wl-clipboard
   wl-mirror
+  wlsunset
   xdg-desktop-portal-gnome
   xdg-desktop-portal-gtk
   xorg-xhost
