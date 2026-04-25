@@ -33,6 +33,8 @@ copy_configs() {
   local -a home_files=(
     .bashrc
     .zshrc
+    .vim
+    .vimrc
   )
 
   for dir in "${conf_dirs[@]}"; do
