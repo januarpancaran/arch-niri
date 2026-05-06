@@ -35,6 +35,7 @@ copy_configs() {
     .zshrc
     .vim
     .vimrc
+    .ideavimrc
   )
 
   for dir in "${conf_dirs[@]}"; do
