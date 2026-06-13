@@ -25,6 +25,7 @@ DEV_PKGS=(
   rust
   sqlite
   visual-studio-code-bin
+  zed
 )
 
 setup_mariadb() {
