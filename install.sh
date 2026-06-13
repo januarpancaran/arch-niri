@@ -33,7 +33,6 @@ copy_configs() {
   local -a home_files=(
     .bashrc
     .zshrc
-    .vim
     .vimrc
     .ideavimrc
   )
